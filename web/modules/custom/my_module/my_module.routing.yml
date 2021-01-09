@@ -1,0 +1,7 @@
+my_module.config_form:
+  path: '/my_module/config'
+  defaults:
+    _form: '\Drupal\my_module\Form\MyConfigForm'
+    _title: 'Config Text'
+  requirements:
+    _permission: 'access content'

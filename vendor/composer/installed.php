@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '9.1.2',
-    'version' => '9.1.2.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '14c22f0d8348936e0ee11513e79f5bf0688f3642',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -451,6 +451,15 @@
         0 => '9.1.2',
       ),
     ),
+    'drupal/duration_field' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.0',
+    ),
     'drupal/dynamic_page_cache' => 
     array (
       'replaced' => 
@@ -471,6 +480,15 @@
       array (
         0 => '9.1.2',
       ),
+    ),
+    'drupal/entity_reference_revisions' => 
+    array (
+      'pretty_version' => '1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.8',
     ),
     'drupal/field' => 
     array (
@@ -689,6 +707,15 @@
         0 => '9.1.2',
       ),
     ),
+    'drupal/paragraphs' => 
+    array (
+      'pretty_version' => '1.12.0',
+      'version' => '1.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-1.12',
+    ),
     'drupal/path' => 
     array (
       'replaced' => 
@@ -719,12 +746,12 @@
     ),
     'drupal/recommended-project' => 
     array (
-      'pretty_version' => '9.1.2',
-      'version' => '9.1.2.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '14c22f0d8348936e0ee11513e79f5bf0688f3642',
     ),
     'drupal/responsive_image' => 
     array (
@@ -879,6 +906,15 @@
       array (
         0 => '9.1.2',
       ),
+    ),
+    'drupal/webform' => 
+    array (
+      'pretty_version' => '6.0.0',
+      'version' => '6.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6.0.0',
     ),
     'drupal/workflows' => 
     array (

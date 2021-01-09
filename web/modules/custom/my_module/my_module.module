@@ -1,0 +1,27 @@
+<?php
+
+function _date_diff($field_duration, $current_time)
+{
+    $invert = false;
+    if ($field_duration > $current_time) {
+        list($field_duration, $current_time) = array($current_time, $field_duration);
+        $invert = true;
+    }
+
+    $key = array("y", "m", "d", "h", "i", "s");
+    $a = array_combine($key, array_map("intval", explode(" ", date("Y m d", $field_duration))));
+    $b = array_combine($key, array_map("intval", explode(" ", date("Y m d", $current_time))));
+
+
+    $result = array();
+    $result["y"] = $b["y"] - $a["y"];
+    $result["m"] = $b["m"] - $a["m"];
+    $result["d"] = $b["d"] - $a["d"];
+    $result["invert"] = $invert ? 1 : 0;
+    $result["days"] = intval(abs(($field_duration - $current_time)/86400));
+
+    return $result;
+
+
+    $difference = $field_duration->diff($current_time);
+}
