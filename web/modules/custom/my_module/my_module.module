@@ -1,27 +1,30 @@
 <?php
 
-function _date_diff($field_duration, $current_time)
-{
-    $invert = false;
-    if ($field_duration > $current_time) {
-        list($field_duration, $current_time) = array($current_time, $field_duration);
-        $invert = true;
+function my_module_node_presave(Drupal\Core\Entity\EntityInterface $entity) {
+    if ($entity->bundle() === 'job_offers') {
+        $field_duration = $entity->get('field_duration')->getString();
+        $end_date = new DateTime($field_duration);
+
+        $current_time = new DateTime("now");
+        $diff = $end_date->diff($current_time);
+
+        $time_left = $diff->format('%a Days and %h hours');
+        $entity->set('field_time_left', $time_left);
     }
+}
 
-    $key = array("y", "m", "d", "h", "i", "s");
-    $a = array_combine($key, array_map("intval", explode(" ", date("Y m d", $field_duration))));
-    $b = array_combine($key, array_map("intval", explode(" ", date("Y m d", $current_time))));
+function my_module_form_alter(&$form, &$form_state, $form_id){
+    if($form_id === "node_job_offers_form" || $form_id === "node_job_offers_edit_form"){
+        $form['#validate'][] = 'my_custom_validate';
+    }
+}
 
+function my_custom_validate(&$form, &$form_state){
+    $field_duration = $form_state->getValue('field_duration')[0]["value"];
+    $end_date = $field_duration->format("Y-m-d");
+    $current_time = new DateTime("now");
 
-    $result = array();
-    $result["y"] = $b["y"] - $a["y"];
-    $result["m"] = $b["m"] - $a["m"];
-    $result["d"] = $b["d"] - $a["d"];
-    $result["invert"] = $invert ? 1 : 0;
-    $result["days"] = intval(abs(($field_duration - $current_time)/86400));
-
-    return $result;
-
-
-    $difference = $field_duration->diff($current_time);
+    if ($end_date < $current_time->format("Y-m-d")){
+        $form_state->setErrorByName('field_duration', ('The end date cannot be in the past!'));
+    }
 }

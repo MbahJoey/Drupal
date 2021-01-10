@@ -790,3 +790,5 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_OX7moIM4m2SDamXajvGgC1sWaRGTfuSEq4c2PJULFJkC1X-bgQLzWory1oJGNQOgCJiFcHvu4w/sync';
+
+$config['system.logging']['error_level'] = 'verbose';
