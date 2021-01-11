@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * HOOK_ENTITY_TYPE_PRESAVE
+ */
 function my_module_node_presave(Drupal\Core\Entity\EntityInterface $entity) {
     if ($entity->bundle() === 'job_offers') {
         $field_duration = $entity->get('field_duration')->getString();

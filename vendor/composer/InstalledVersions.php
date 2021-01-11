@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '14c22f0d8348936e0ee11513e79f5bf0688f3642',
+    'reference' => '0ae8d8d56f660675a09839e49f7e3eb5324121ce',
     'name' => 'drupal/recommended-project',
   ),
   'versions' => 
@@ -203,6 +203,15 @@ private static $installed = array (
       array (
         0 => '9.1.2',
       ),
+    ),
+    'drupal/construction_zymphonies_theme' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1.0.1',
     ),
     'drupal/contact' => 
     array (
@@ -764,7 +773,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '14c22f0d8348936e0ee11513e79f5bf0688f3642',
+      'reference' => '0ae8d8d56f660675a09839e49f7e3eb5324121ce',
     ),
     'drupal/responsive_image' => 
     array (
@@ -849,6 +858,15 @@ private static $installed = array (
       array (
         0 => '9.1.2',
       ),
+    ),
+    'drupal/tara' => 
+    array (
+      'pretty_version' => '2.3.0',
+      'version' => '2.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8.x-2.3',
     ),
     'drupal/taxonomy' => 
     array (
@@ -942,6 +960,15 @@ private static $installed = array (
       array (
         0 => '9.1.2',
       ),
+    ),
+    'drupal/zinble' => 
+    array (
+      'pretty_version' => '2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2.0.0',
     ),
     'egulias/email-validator' => 
     array (
